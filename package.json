@@ -1,0 +1,14 @@
+{
+  "name": "elite-poker-chips-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Elite Poker Chips - Zynga & Velo chip seller.",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.24",
+    "autoprefixer": "^10.4.16"
+  }
+} 
