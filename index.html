@@ -47,15 +47,15 @@
       document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.add('hidden');
       });
-      
+
       // Remove active class from all tabs
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
       });
-      
+
       // Show selected tab content
       document.getElementById(tabName + '-content').classList.remove('hidden');
-      
+
       // Add active class to selected tab
       document.getElementById(tabName + '-tab').classList.add('active');
     }
@@ -71,7 +71,7 @@
       color: white;
     }
     .tab-btn:hover {
-      background-color: #374151;
+      background-color: #f97316;
       color: white;
     }
     .hidden {
@@ -82,7 +82,7 @@
   <!-- Pricing Section -->
   <section class="w-full max-w-2xl mx-auto mt-12 px-4">
     <h2 class="text-3xl font-bold text-center mb-8 text-yellow-400">💰 Choose Your Package</h2>
-    
+
     <!-- Tab Navigation -->
     <div class="flex justify-center mb-8">
       <div class="bg-gray-800 rounded-lg p-1 flex gap-1">
@@ -104,7 +104,7 @@
         <h3 class="text-2xl font-bold text-yellow-400 mb-2">🎯 Starter Packages</h3>
         <p class="text-gray-300">Perfect for beginners and casual players</p>
       </div>
-      
+
       <!-- Zynga Poker Table -->
       <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
         <div class="bg-gradient-to-r from-red-700 to-yellow-500 text-black p-4 text-center">
@@ -166,7 +166,7 @@
         <h3 class="text-2xl font-bold text-pink-400 mb-2">💎 Premium Packages</h3>
         <p class="text-gray-300">For serious players with better value</p>
       </div>
-      
+
       <!-- Zynga Poker Table -->
       <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
         <div class="bg-gradient-to-r from-red-700 to-yellow-500 text-black p-4 text-center">
@@ -230,7 +230,7 @@
         <h3 class="text-2xl font-bold text-orange-400 mb-2">👑 VIP Packages</h3>
         <p class="text-gray-300">For high rollers and professional players</p>
       </div>
-      
+
       <!-- Zynga Poker Table -->
       <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
         <div class="bg-gradient-to-r from-red-700 to-yellow-500 text-black p-4 text-center">
@@ -298,35 +298,115 @@
     </ul>
   </section>
 
-  <!-- FAQ (Optional) -->
+  <!-- FAQ Section -->
   <section class="w-full max-w-2xl mx-auto mt-12 px-4">
-    <h3 class="text-xl font-bold mb-4 text-blue-400 flex items-center gap-2"><span>FAQ</span> <span>❓</span></h3>
-    <div class="space-y-4">
-      <div class="bg-gray-800 rounded-lg p-4">
-        <p class="font-semibold">How do I pay?</p>
-        <p class="text-sm text-gray-300 flex items-center justify-center flex-wrap gap-6 py-2">
-          <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
-            <img src="img/bkash.png" alt="bKash" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
-          </span>
-          <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
-            <img src="img/nagod.png" alt="Nagad" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
-          </span>
-          <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
-            <img src="img/crypto.png" alt="Crypto" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
-          </span>
-          <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
-            <img src="img/bank-transfer.png" alt="Bank Transfar" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
-          </span>
-        </p>
-        <br>
-        <p class="text-xs text-gray-400 text-center mt-2">💬 Message us on WhatsApp for details.</p>
+    <h3 class="text-3xl font-bold mb-6 text-center text-blue-400 flex items-center justify-center gap-2"><span>Frequently Asked Questions</span> <span>❓</span></h3>
+    <div class="space-y-3">
+      <!-- FAQ Item 1 -->
+      <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <button onclick="toggleFAQ(1)" class="w-full text-left p-4 hover:bg-gray-700 transition-colors duration-200 flex items-center justify-between">
+          <span class="font-semibold text-white">💳 How do I pay?</span>
+          <span id="arrow-1" class="text-blue-400 transform transition-transform duration-200">▼</span>
+        </button>
+        <div id="faq-1" class="hidden px-4 pb-4">
+          <p class="text-sm text-gray-300 mb-3">We accept multiple payment methods:</p>
+          <div class="flex items-center justify-center flex-wrap gap-4 py-2">
+            <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
+              <img src="img/bkash.png" alt="bKash" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
+            </span>
+            <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
+              <img src="img/nagod.png" alt="Nagad" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
+            </span>
+            <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
+              <img src="img/crypto.png" alt="Crypto" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
+            </span>
+            <span style="background:#fff;border-radius:12px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 2px 8px 0 rgba(0,0,0,0.08);">
+              <img src="img/bank-transfer.png" alt="Bank Transfer" style="height:44px;width:auto;display:inline-block;vertical-align:middle;" />
+            </span>
+          </div>
+          <p class="text-xs text-gray-400 text-center mt-3">💬 Message us on WhatsApp for payment details.</p>
+        </div>
       </div>
-      <div class="bg-gray-800 rounded-lg p-4">
-        <p class="font-semibold">How long does delivery take?</p>
-        <p class="text-sm text-gray-300">🚚 Delivery is instant after payment confirmation. Most orders are fulfilled within minutes, 24/7!</p>
+
+      <!-- FAQ Item 2 -->
+      <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <button onclick="toggleFAQ(2)" class="w-full text-left p-4 hover:bg-gray-700 transition-colors duration-200 flex items-center justify-between">
+          <span class="font-semibold text-white">🚚 How long does delivery take?</span>
+          <span id="arrow-2" class="text-blue-400 transform transition-transform duration-200">▼</span>
+        </button>
+        <div id="faq-2" class="hidden px-4 pb-4">
+          <p class="text-sm text-gray-300">⚡ Delivery is instant after payment confirmation. Most orders are fulfilled within minutes, 24/7!</p>
+          <p class="text-xs text-gray-400 mt-2">Note: Large orders (50T+) may take up to 30 minutes during peak hours.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <button onclick="toggleFAQ(3)" class="w-full text-left p-4 hover:bg-gray-700 transition-colors duration-200 flex items-center justify-between">
+          <span class="font-semibold text-white">🔒 Is it safe to buy chips?</span>
+          <span id="arrow-3" class="text-blue-400 transform transition-transform duration-200">▼</span>
+        </button>
+        <div id="faq-3" class="hidden px-4 pb-4">
+          <p class="text-sm text-gray-300">✅ Yes, completely safe! We use secure transfer methods and have been serving customers for years.</p>
+          <p class="text-xs text-gray-400 mt-2">🛡️ Your account information is never shared and all transactions are private.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <button onclick="toggleFAQ(4)" class="w-full text-left p-4 hover:bg-gray-700 transition-colors duration-200 flex items-center justify-between">
+          <span class="font-semibold text-white">📱 What information do I need to provide?</span>
+          <span id="arrow-4" class="text-blue-400 transform transition-transform duration-200">▼</span>
+        </button>
+        <div id="faq-4" class="hidden px-4 pb-4">
+          <p class="text-sm text-gray-300">For Zynga Poker: Your Player ID or Facebook email</p>
+          <p class="text-sm text-gray-300">For Velo Poker: Your game username</p>
+          <p class="text-xs text-gray-400 mt-2">🔍 We'll guide you through finding this information when you place your order.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <button onclick="toggleFAQ(5)" class="w-full text-left p-4 hover:bg-gray-700 transition-colors duration-200 flex items-center justify-between">
+          <span class="font-semibold text-white">🎯 Do you offer bulk discounts?</span>
+          <span id="arrow-5" class="text-blue-400 transform transition-transform duration-200">▼</span>
+        </button>
+        <div id="faq-5" class="hidden px-4 pb-4">
+          <p class="text-sm text-gray-300">💰 Yes! Our Premium and VIP packages already include bulk pricing.</p>
+          <p class="text-sm text-gray-300">For orders over 100T, contact us for special rates.</p>
+          <p class="text-xs text-gray-400 mt-2">🤝 Regular customers also get loyalty discounts!</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <button onclick="toggleFAQ(6)" class="w-full text-left p-4 hover:bg-gray-700 transition-colors duration-200 flex items-center justify-between">
+          <span class="font-semibold text-white">📞 Customer Support</span>
+          <span id="arrow-6" class="text-blue-400 transform transition-transform duration-200">▼</span>
+        </button>
+        <div id="faq-6" class="hidden px-4 pb-4">
+          <p class="text-sm text-gray-300">🕒 24/7 support available via WhatsApp</p>
+          <p class="text-sm text-gray-300">📱 Response time: Usually within 5 minutes</p>
+          <p class="text-xs text-gray-400 mt-2">💬 We speak English, Bengali, and Hindi</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <script>
+    function toggleFAQ(num) {
+      const content = document.getElementById(`faq-${num}`);
+      const arrow = document.getElementById(`arrow-${num}`);
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
 
   <!-- Sticky WhatsApp Button (Mobile) -->
   <a href="https://wa.me/+8801990591438" target="_blank" class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center gap-2 md:hidden animate-bounce" aria-label="Order on WhatsApp">
@@ -344,4 +424,4 @@
     .font-poppins { font-family: 'Poppins', Arial, sans-serif; }
   </style>
 </body>
-</html> 
+</html>
