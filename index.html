@@ -19,40 +19,266 @@
     <h1 class="text-3xl md:text-5xl font-montserrat font-bold mb-2 tracking-wide">Elite Poker Chips <span class="inline-block align-middle">🃏</span></h1>
     <h2 class="text-lg md:text-2xl font-semibold mb-6">Trusted Zynga & Velo Chip Seller</h2>
     <p class="text-base md:text-lg mb-6">Instant Delivery <span class="mx-2">|</span> Cheap Rates <span class="mx-2">|</span> 100% Trusted Seller</p>
-    <a href="https://wa.me/4915734619280" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-200 animate-bounce">Order Now on WhatsApp</a>
+    <a href="https://wa.me/+8801990591438" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-200 animate-bounce">Order Now on WhatsApp</a>
     <div class="absolute right-4 top-4 hidden md:block text-5xl">🎰</div>
   </header>
 
-  <!-- Pricing Table -->
-  <section class="w-full max-w-2xl mx-auto mt-8 px-4">
-    <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden">
-      <table class="w-full text-center">
-        <thead class="bg-gradient-to-r from-red-700 to-yellow-500 text-black">
-          <tr>
-            <th class="py-3 px-2 text-lg font-bold">Product</th>
-            <th class="py-3 px-2 text-lg font-bold">1T Price</th>
-            <th class="py-3 px-2 text-lg font-bold">5T Price</th>
-            <th class="py-3 px-2 text-lg font-bold">25T Price</th>
-          </tr>
-        </thead>
-        <tbody class="text-white">
-          <tr class="border-b border-gray-700">
-            <td class="py-4 px-2 font-semibold flex items-center justify-center gap-2">Zynga Poker Chips <span>💰</span></td>
-            <td class="py-4 px-2">$5</td>
-            <td class="py-4 px-2">$25</td>
-            <td class="py-4 px-2">$100</td>
-          </tr>
-          <tr>
-            <td class="py-4 px-2 font-semibold flex items-center justify-center gap-2">Velo Poker Chips <span>🎰</span></td>
-            <td class="py-4 px-2">$5</td>
-            <td class="py-4 px-2">$25</td>
-            <td class="py-4 px-2">$100</td>
-          </tr>
-        </tbody>
-      </table>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Cards Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', 'Montserrat', Arial, sans-serif; }
+    .font-montserrat { font-family: 'Montserrat', Arial, sans-serif; }
+    .font-poppins { font-family: 'Poppins', Arial, sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white font-poppins min-h-screen p-8">
+  <script>
+    function showTab(tabName) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      
+      // Remove active class from all tabs
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Show selected tab content
+      document.getElementById(tabName + '-content').classList.remove('hidden');
+      
+      // Add active class to selected tab
+      document.getElementById(tabName + '-tab').classList.add('active');
+    }
+  </script>
+
+  <style>
+    .tab-btn {
+      background-color: transparent;
+      color: #9ca3af;
+    }
+    .tab-btn.active {
+      background-color: #1f2937;
+      color: white;
+    }
+    .tab-btn:hover {
+      background-color: #374151;
+      color: white;
+    }
+  </style>
+
+  <!-- Pricing Section -->
+  <section class="w-full max-w-2xl mx-auto mt-12 px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-yellow-400">💰 Choose Your Package</h2>
+    
+    <!-- Tab Navigation -->
+    <div class="flex justify-center mb-8">
+      <div class="bg-gray-800 rounded-lg p-1 flex gap-1">
+        <button onclick="showTab('starter')" id="starter-tab" class="tab-btn active px-6 py-3 rounded-lg font-semibold transition-all duration-200">
+          🎯 Starter Packs
+        </button>
+        <button onclick="showTab('premium')" id="premium-tab" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-200">
+          💎 Premium Packs
+        </button>
+        <button onclick="showTab('vip')" id="vip-tab" class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-200">
+          👑 VIP Packs
+        </button>
+      </div>
     </div>
-    <div class="flex justify-center mt-6">
-      <a href="https://wa.me/4915734619280" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-200">Order Now</a>
+
+    <!-- Starter Packs Tab -->
+    <div id="starter-content" class="tab-content">
+      <div class="text-center mb-6">
+        <h3 class="text-2xl font-bold text-yellow-400 mb-2">🎯 Starter Packages</h3>
+        <p class="text-gray-300">Perfect for beginners and casual players</p>
+      </div>
+      
+      <!-- Zynga Poker Table -->
+      <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
+        <div class="bg-gradient-to-r from-red-700 to-yellow-500 text-black p-4 text-center">
+          <h4 class="text-xl font-bold flex items-center justify-center gap-2">
+            <span>💰 Zynga Poker Chips</span>
+          </h4>
+        </div>
+        <table class="w-full text-center">
+          <thead class="bg-gray-800 text-yellow-400">
+            <tr>
+              <th class="py-3 px-2 text-lg font-bold">1T</th>
+              <th class="py-3 px-2 text-lg font-bold">2T</th>
+              <th class="py-3 px-2 text-lg font-bold">3T</th>
+              <th class="py-3 px-2 text-lg font-bold">4T</th>
+            </tr>
+          </thead>
+          <tbody class="text-white">
+            <tr>
+              <td class="py-4 px-2 font-semibold">$8</td>
+              <td class="py-4 px-2 font-semibold">$15</td>
+              <td class="py-4 px-2 font-semibold">$22</td>
+              <td class="py-4 px-2 font-semibold">$28</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Velo Poker Table -->
+      <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
+        <div class="bg-gradient-to-r from-purple-700 to-pink-500 text-white p-4 text-center">
+          <h4 class="text-xl font-bold flex items-center justify-center gap-2">
+            <span>🎰 Velo Poker Chips</span>
+          </h4>
+        </div>
+        <table class="w-full text-center">
+          <thead class="bg-gray-800 text-pink-400">
+            <tr>
+              <th class="py-3 px-2 text-lg font-bold">10T</th>
+              <th class="py-3 px-2 text-lg font-bold">20T</th>
+              <th class="py-3 px-2 text-lg font-bold">30T</th>
+              <th class="py-3 px-2 text-lg font-bold">40T</th>
+            </tr>
+          </thead>
+          <tbody class="text-white">
+            <tr>
+              <td class="py-4 px-2 font-semibold">$12.5</td>
+              <td class="py-4 px-2 font-semibold">$25</td>
+              <td class="py-4 px-2 font-semibold">$37.5</td>
+              <td class="py-4 px-2 font-semibold">$47.5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Premium Packs Tab -->
+    <div id="premium-content" class="tab-content hidden">
+      <div class="text-center mb-6">
+        <h3 class="text-2xl font-bold text-pink-400 mb-2">💎 Premium Packages</h3>
+        <p class="text-gray-300">For serious players with better value</p>
+      </div>
+      
+      <!-- Zynga Poker Table -->
+      <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
+        <div class="bg-gradient-to-r from-red-700 to-yellow-500 text-black p-4 text-center">
+          <h4 class="text-xl font-bold flex items-center justify-center gap-2">
+            <span>💰 Zynga Poker Chips</span>
+          </h4>
+        </div>
+        <table class="w-full text-center">
+          <thead class="bg-gray-800 text-yellow-400">
+            <tr>
+              <th class="py-3 px-2 text-lg font-bold">5T</th>
+              <th class="py-3 px-2 text-lg font-bold">10T</th>
+              <th class="py-3 px-2 text-lg font-bold">20T</th>
+              <th class="py-3 px-2 text-lg font-bold">50T</th>
+
+            </tr>
+          </thead>
+          <tbody class="text-white">
+            <tr>
+              <td class="py-4 px-2 font-semibold">$34</td>
+              <td class="py-4 px-2 font-semibold">$65</td>
+              <td class="py-4 px-2 font-semibold">$120</td>
+              <td class="py-4 px-2 font-semibold">$260</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Velo Poker Table -->
+      <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
+        <div class="bg-gradient-to-r from-purple-700 to-pink-500 text-white p-4 text-center">
+          <h4 class="text-xl font-bold flex items-center justify-center gap-2">
+            <span>🎰 Velo Poker Chips</span>
+          </h4>
+        </div>
+        <table class="w-full text-center">
+          <thead class="bg-gray-800 text-pink-400">
+            <tr>
+              <th class="py-3 px-2 text-lg font-bold">50T</th>
+              <th class="py-3 px-2 text-lg font-bold">600T</th>
+              <th class="py-3 px-2 text-lg font-bold">70T</th>
+              <th class="py-3 px-2 text-lg font-bold">80T</th>
+
+            </tr>
+          </thead>
+          <tbody class="text-white">
+            <tr>
+              <td class="py-4 px-2 font-semibold">$52.5</td>
+              <td class="py-4 px-2 font-semibold">$62.5</td>
+              <td class="py-4 px-2 font-semibold">$72.5</td>
+              <td class="py-4 px-2 font-semibold">$82.5</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- VIP Packs Tab -->
+    <div id="vip-content" class="tab-content hidden">
+      <div class="text-center mb-6">
+        <h3 class="text-2xl font-bold text-orange-400 mb-2">👑 VIP Packages</h3>
+        <p class="text-gray-300">For high rollers and professional players</p>
+      </div>
+      
+      <!-- Zynga Poker Table -->
+      <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
+        <div class="bg-gradient-to-r from-red-700 to-yellow-500 text-black p-4 text-center">
+          <h4 class="text-xl font-bold flex items-center justify-center gap-2">
+            <span>💰 Zynga Poker Chips</span>
+          </h4>
+        </div>
+        <table class="w-full text-center">
+          <thead class="bg-gray-800 text-yellow-400">
+            <tr>
+              <th class="py-3 px-2 text-lg font-bold">100T</th>
+            </tr>
+          </thead>
+          <tbody class="text-white">
+            <tr>
+              <td class="py-4 px-2 font-semibold">$500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Velo Poker Table -->
+      <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden mb-6">
+        <div class="bg-gradient-to-r from-purple-700 to-pink-500 text-white p-4 text-center">
+          <h4 class="text-xl font-bold flex items-center justify-center gap-2">
+            <span>🎰 Velo Poker Chips</span>
+          </h4>
+        </div>
+        <table class="w-full text-center">
+          <thead class="bg-gray-800 text-pink-400">
+            <tr>
+              <th class="py-3 px-2 text-lg font-bold">90T</th>
+              <th class="py-3 px-2 text-lg font-bold">100T</th>
+              <th class="py-3 px-2 text-lg font-bold">1000T</th>
+
+            </tr>
+          </thead>
+          <tbody class="text-white">
+            <tr>
+              <td class="py-4 px-2 font-semibold">$92.5</td>
+              <td class="py-4 px-2 font-semibold">$100</td>
+              <td class="py-4 px-2 font-semibold">$1000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Order Button -->
+    <div class="flex justify-center mt-8">
+      <a href="https://wa.me/+8801990591438" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg text-lg transition-all duration-200 transform hover:scale-105">
+        📱 Order Now on WhatsApp
+      </a>
     </div>
   </section>
 
@@ -98,7 +324,7 @@
   </section>
 
   <!-- Sticky WhatsApp Button (Mobile) -->
-  <a href="https://wa.me/4915734619280" target="_blank" class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center gap-2 md:hidden animate-bounce" aria-label="Order on WhatsApp">
+  <a href="https://wa.me/+8801990591438" target="_blank" class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center gap-2 md:hidden animate-bounce" aria-label="Order on WhatsApp">
     <span class="text-2xl">💬</span>
     <span class="font-bold">Order Now</span>
   </a>
